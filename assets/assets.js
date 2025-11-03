@@ -278,7 +278,7 @@ export const infoList = [
     iconDark: assets.project_icon_dark,
     title: "Projects & Systems Built",
     description:
-      "20+ projects across Full-Stack, AI, and Robotics — including Model Context Protocol, Multi-Agent Trading Workflow, RAG Systems, and Intelligent Patient Care Devices",
+      "Multiple projects across Full-Stack, AI, and Robotics — including Model Context Protocol, Multi-Agent Trading Workflow, RAG Systems, and Intelligent Patient Care Devices",
   },
   {
     icon: assets.deeplearning_icon,
