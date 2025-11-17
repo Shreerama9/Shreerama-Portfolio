@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Briefcase, Code, Brain, Sparkles, Search, Cpu, GraduationCap, Box, Trophy, HeartPlus } from 'lucide-react';
 import { motion } from "framer-motion";
-import { profExpData } from '@/assets/assets';
-import { educationData } from '@/assets/assets';
+import { profExpData } from "../assets/assets";
+import { educationData } from "../assets/assets";
 
 const TimelineTest = ({ isDarkMode }) => {
   const [searchTerm, setSearchTerm] = useState('');
