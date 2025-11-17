@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Chatbot({ isOpen, onClose, isDarkMode }) {
+export default function Chatbot({ isOpen, onClose, isDarkMode, alwaysOpen = false }) {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
     {
@@ -9,6 +9,29 @@ export default function Chatbot({ isOpen, onClose, isDarkMode }) {
     }
   ]);
   const [isLoading, setIsLoading] = useState(false);
+
+  // Handle custom events from dedicated page
+  useEffect(() => {
+    const handleCustomMessage = (event) => {
+      const message = event.detail;
+      if (message && isOpen) {
+        setInput(message);
+        // Auto-submit the message
+        setTimeout(() => {
+          const formEvent = new Event('submit', { cancelable: true });
+          const form = document.querySelector('form');
+          if (form) {
+            form.dispatchEvent(formEvent);
+          }
+        }, 100);
+      }
+    };
+
+    window.addEventListener('chatbot-message', handleCustomMessage);
+    return () => {
+      window.removeEventListener('chatbot-message', handleCustomMessage);
+    };
+  }, [isOpen]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -80,14 +103,16 @@ export default function Chatbot({ isOpen, onClose, isDarkMode }) {
               Shreerama AI
             </h3>
           </div>
-          <button
-            onClick={onClose}
-            className={`p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors`}
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+          {!alwaysOpen && (
+            <button
+              onClick={onClose}
+              className={`p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors`}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          )}
         </div>
 
         {/* Messages */}

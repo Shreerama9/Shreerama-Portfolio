@@ -4,9 +4,7 @@ import robots_icon from "./web-icon.png"; // Using web-icon as placeholder for r
 import ai_agent_icon from "./deeplearning-icon.png"; // Using deeplearning-icon as placeholder
 import search_icon from "./send-icon.png"; // Using send-icon as placeholder for search
 import shreerama_image from "./shreerama-projects/shreerama-image.png";
-
-
-
+import multiTrading from "./shreerama-projects/multiTrading.jpg"
 
 
 import user_image from "./user-image.png";
@@ -48,6 +46,7 @@ import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import black_image from "./shreerama-projects/Black_colour.jpg";
 import send_icon_dark from "./send-icon-dark.png";
+import chatBot from "./shreerama-projects/chatbot.jpg"
 
 
 
@@ -121,142 +120,15 @@ export const assets = {
   deeplearning_icon_dark,
   GraduationCap,
   Box,
-  HeartPlus
+  HeartPlus,
+
+  chatBot,
+  multiTrading
 
 
 
 
 };
-export const workData2 = [
-  {
-    title: "BoilerSaaS",
-    description:
-      "Production-ready SaaS starter with auth, payments, and CI/CD integration.",
-    bgImage: black_image,
-    category: "Full-Stack",
-    github: "https://github.com/shreerama9/boilersaas",
-    techStack: [
-      "Next.js",
-      "Supabase",
-      "Tailwind",
-      "TypeScript",
-      "GitHub Actions",
-    ],
-  },
-  {
-    title: "Multi-Agent Trading Workflow",
-    description:
-      "AI-driven modular trading system using RAG and logic-based stock selection.",
-    bgImage: black_image,
-    category: "AI",
-    github: "https://github.com/shreerama9/multi-agent-trading",
-    techStack: ["Python", "LangChain", "n8n", "OpenAI API"],
-  },
-  {
-    title: "Real-Time Chat App",
-    description:
-      "Instant messaging app with WebSockets, authentication, and persistent chat storage.",
-    bgImage: black_image,
-    category: "Full-Stack",
-    github: "https://github.com/shreerama9/realtime-chat",
-    techStack: ["MongoDB", "Express", "React", "Node.js", "Socket.io", "JWT"],
-  },
-  {
-    title: "PDF Helper",
-    description:
-      "Smart PDF summarizer with processing & management platform for merging, compressing, and splitting files.",
-    bgImage: black_image,
-    category: "Full-Stack",
-    link: "",
-    techStack: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "Node.js",
-      "PDF-lib",
-    ],
-  },
-  {
-    title: "YouTube Summarizer",
-    description:
-      "Nextjs frontend and Python backend for YouTube summarizer.",
-    bgImage: black_image,
-    category: "AI",
-    link: "",
-    techStack: ["Python", "Nextjs", "youtube_transcript_api", "OpenAI API"],
-  },
-{
-    title: "Bionic Prosthetic Arm",
-    description:
-      "AI-powered prosthetic arm using EMG signals and RNN-based movement prediction.",
-    bgImage: black_image,
-    category: "Robotics",
-    link: "https://github.com/shreerama9/bionic-arm",
-    techStack: ["Embedded C++", "TensorFlow", "MATLAB", "Arduino"],
-  },
-  {
-    title: "Deep Learning Projects",
-    description:
-      "Fine-tunned LLM for specific use cases.",
-    bgImage: deeplearning_icon,
-    category: "AI",
-    link: "https://iqac.puchd.ac.in/design-innovation-centredic-coffee-book-was-launched-by-vice-chancellor-prof-renu-vig/",
-    techStack: ["PyTorch", "TensorFlow", "Keras", "Python","LORA"],
-  },
-  
-  {
-    title: "Intelligent Patient Care Bed",
-    description:
-      "Patent-filed smart healthcare system for patient monitoring with sensor integration.",
-    bgImage: black_image,
-    category: "Robotics",
-    github: "https://arogayacibiod.in/",
-    techStack: ["Python", "MATLAB", "IoT Sensors"],
-  },
-  {
-    title: "Eye-Tracking Wheelchair System",
-    description:
-      "Assistive wheelchair controlled via eye movement using ML-based direction detection.",
-    bgImage: black_image,
-    category: "Robotics",
-    link: "https://arogayacibiod.in/",
-    techStack: ["Python", "TensorFlow", "MATLAB", "OpenCV", "Arduino"],
-  },
-  {
-    title: "Medical Grade 3D Printer",
-    description:
-      "PEEK-based 3D printer for medical implants with CFD-optimized laminar airflow design.",
-    bgImage: black_image,
-    category: "Robotics",
-    link: "https://www.ntu.ac.uk/",
-    techStack: ["CFD", "Fusion 360", "Python", "MATLAB", "Embedded Control"],
-  },
-  {
-    title: "Pick and Place Machine",
-    description:
-      "Automated device handler for chip segregation built in collaboration with Semiconductor Lab.",
-    bgImage: black_image,
-    category: "Robotics & AI",
-    link: "",
-    techStack: [
-      "OpenCV",
-      "Deep Learning",
-      "Embedded Systems",
-      "Stepper Motors",
-      "Sensor Integration",
-    ],
-  },
-  {
-    title: "AI Agent Development",
-    description:
-      "n8n-based agentic automation for video processing and video generation workflows.",
-    bgImage: black_image,
-    category: "AI",
-    link: "",
-    techStack: ["n8n", "OpenAI API", "Webhooks"],
-  },
-];
 
 export const infoList = [
   {
@@ -304,13 +176,6 @@ export const infoList = [
 ];
 
 
-//export const toolsData = [
-//  assets.vscode,
-//  assets.firebase,
-//  assets.mongodb,
-//  assets.figma,
-//  assets.git,
-//];
 
 export const profExpData = [
   {
@@ -431,9 +296,9 @@ export const workData = [
     title: "Multi-Agent Trading Workflow",
     description:
       "AI-driven modular trading system using RAG and logic-based stock selection.",
-    bgImage: black_image,
+    bgImage: multiTrading,
     category: "AI",
-    link: "",
+    link: "/#contact",
     techStack: ["Python", "LangChain", "n8n", "OpenAI API"],
   },
   {
@@ -442,7 +307,7 @@ export const workData = [
       "Instant messaging app with WebSockets, authentication, and persistent chat storage.",
     bgImage: black_image,
     category: "Full-Stack",
-    link: "",
+    link: "/#contact",
     techStack: ["MongoDB", "Express", "React", "Node.js", "Socket.io", "JWT"],
   },
   {
@@ -451,7 +316,7 @@ export const workData = [
       "Smart PDF summarizer with processing & management platform for merging, compressing, and splitting files.",
     bgImage: black_image,
     category: "Full-Stack",
-    link: "",
+    link: "/#contact",
     techStack: [
       "React",
       "Next.js",
@@ -467,16 +332,16 @@ export const workData = [
       "Nextjs frontend and Python backend for YouTube summarizer.",
     bgImage: black_image,
     category: "AI",
-    link: "",
+    link: "/#contact",
     techStack: ["Python", "Nextjs", "youtube_transcript_api", "OpenAI API"],
   },
   {
     title: "Custom Chatbot",
     description:
       "Custom chatbot with web interface and API integration.",
-    bgImage: black_image,
+    bgImage: chatBot,
     category: "AI",
-    link: "",
+    link: "http://srama.co.in/chatbot",
     techStack: ["Python", "Nextjs", "API Integration"],
   },
 {
@@ -485,7 +350,7 @@ export const workData = [
       "AI-powered prosthetic arm using EMG signals and RNN-based movement prediction.",
     bgImage: black_image,
     category: "Robotics",
-    link: "",
+    link: "/#contact",
     techStack: ["Embedded C++", "TensorFlow", "MATLAB", "Arduino"],
   },
   {
@@ -494,7 +359,7 @@ export const workData = [
       "Fine-tunned LLM for specific use cases.",
     bgImage: black_image,
     category: "AI",
-    link: "https://iqac.puchd.ac.in//",
+    link: "/#contact",
     techStack: ["PyTorch", "TensorFlow", "Keras", "Python","LORA"],
   },
   
@@ -531,7 +396,7 @@ export const workData = [
       "Automated device handler for chip segregation built in collaboration with Semiconductor Lab.",
     bgImage: black_image,
     category: "Robotics & AI",
-    link: "",
+    link: "/#contact",
     techStack: [
       "OpenCV",
       "Deep Learning",
