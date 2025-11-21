@@ -40,8 +40,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             <li><a className='font-Ovo' href="#top">Home</a></li>
             <li><a className='font-Ovo' href="#about">About me</a></li>
             <li><a className='font-Ovo' href="#experience">Professional Experience</a></li>
-            <li><a className='font-Ovo' href="#work">My Work</a></li>
-            <li><a className='font-Ovo' href="#contact">Contact me</a></li>
+            <li><a className='font-Ovo' href="#work">Latest Work</a></li>
         </ul>
 
         <div className='flex items-center gap-4'>

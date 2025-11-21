@@ -24,14 +24,14 @@ const Header = () => {
     whileInView={{y: 0, opacity: 1}}
     transition={{duration: 0.8, delay: 0.5}}
     className='text-3xl sm:text-5xl lg:text-[66px] font-Ovo'>
-        AI Engineer from India.</motion.h1>
+        Full Stack AI Engineer</motion.h1>
 
         <motion.p
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay: 0.7}}
         className='max-w-2xl mx-auto font-Ovo'>
-        creating agentic AI systems and SaaS products that blend functionality with intelligence.
+        creating Full stack applications, agentic AI systems and SaaS products that blend functionality with intelligence.
         </motion.p>
 
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
@@ -47,7 +47,7 @@ const Header = () => {
             initial={{y: 30, opacity: 0}}
             whileInView={{y: 0, opacity: 1}}
             transition={{duration: 0.6, delay: 1.2}}
-            href="/shreerama_resume.pdf" download 
+            href="/shreerama_Resume.pdf" download 
             className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>
                 My Resume <Image src={assets.download_icon} alt='Download icon' className='w-4'/></motion.a>
         </div>
