@@ -10,7 +10,7 @@ const Footer = ({isDarkMode}) => {
 
         <div className='w-max flex items-center gap-2 mx-auto'>
             <Image src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} alt='Email icon' className='w-6'/>
-            <a href="mailto:shreerama9official+portfolio@gmail.com">shreerama9official@gmail.com</a>
+            <a href="mailto:ai@srama.co.in">ai@srama.co.in</a>
         </div>
       </div>
 
