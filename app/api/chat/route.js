@@ -54,7 +54,7 @@ export async function POST(request) {
           ...messages,
           {
             role: "system",
-            content: "When responding about projects or lists, use bullet points (• or -) instead of paragraphs. Keep responses concise and well-structured. For technical details, use clear headings and bullet points."
+            content: "When responding about projects or lists, use bullet points (-) instead of paragraphs. Keep responses concise and well-structured. For technical details, use clear headings and bullet points."
           }
         ],
         temperature: 0.7,

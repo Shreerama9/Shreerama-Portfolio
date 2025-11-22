@@ -7,7 +7,6 @@ import shreerama_image from "./shreerama-projects/shreerama-image.png";
 import multiTrading from "./shreerama-projects/multiTrading.jpg"
 
 
-import user_image from "./user-image.png";
 import code_icon from "./code-icon.png";
 import code_icon_dark from "./code-icon-dark.png";
 import edu_icon from "./edu-icon.png";
@@ -15,16 +14,12 @@ import edu_icon_dark from "./edu-icon-dark.png";
 import project_icon from "./project-icon.png";
 import project_icon_dark from "./project-icon-dark.png";
 import vscode from "./vscode.png";
-import firebase from "./firebase.png";
-import figma from "./figma.png";
-import git from "./git.png";
 import mongodb from "./mongodb.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
-import profile_img from "./profile-img.png";
 import download_icon from "./download-icon.png";
 import hand_icon from "./hand-icon.png";
 import header_bg_color from "./header-bg-color.png";
@@ -47,8 +42,15 @@ import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import black_image from "./shreerama-projects/Black_colour.jpg";
 import send_icon_dark from "./send-icon-dark.png";
 import chatBot from "./shreerama-projects/chatbot.jpg"
-
-
+import awps from "./shreerama-projects/AWPS1.png"
+import bpa from "./shreerama-projects/BPA.png"
+import ipc from "./shreerama-projects/IPC.png"
+import mgp from "./shreerama-projects/MGP.png"
+import ff from "./shreerama-projects/ff.png"
+import dl from "./shreerama-projects/dl.png"
+import pdf from "./shreerama-projects/PDF.png"
+import pickplace from "./shreerama-projects/pickplace.png"
+import yt from "./shreerama-projects/yt.png"
 
 {/* shreerama projects*/}
 import logo_svg from "./shreerama-projects/logo.svg";
@@ -64,7 +66,7 @@ import { GraduationCap , Box , HeartPlus} from "lucide-react";
 
 
 export const assets = {
-  user_image,
+  
   code_icon,
   code_icon_dark,
   edu_icon,
@@ -72,16 +74,13 @@ export const assets = {
   project_icon,
   project_icon_dark,
   vscode,
-  firebase,
-  figma,
-  git,
   mongodb,
   right_arrow_white,
   logo,
   logo_dark,
   mail_icon,
   mail_icon_dark,
-  profile_img,
+  
   download_icon,
   hand_icon,
   header_bg_color,
@@ -123,7 +122,16 @@ export const assets = {
   HeartPlus,
 
   chatBot,
-  multiTrading
+  multiTrading,
+  awps,
+  bpa,
+  ipc,
+  mgp,
+  ff,
+  dl,
+  pdf,
+  pickplace,
+  yt
 
 
 
@@ -300,6 +308,13 @@ export const workData = [
     category: "AI",
     link: "/#contact",
     techStack: ["Python", "LangChain", "n8n", "OpenAI API"],
+  },  {
+    title: "FuneralFlow",
+    description: "Landing page for AI-powered platform streamlining post-funeral paperwork with intelligent OCR and automated document processing.",
+    bgImage: ff, // You'll need to import/define your background image
+    category: "Full Stack AI",
+    link: "funeralflow.srama.co.in", // Update with your actual deployed URL
+    techStack: ["Next.js 16", "TypeScript", "Prisma", "NextAuth", "Tailwind CSS"],
   },
   {
     title: "Real-Time Chat App",
@@ -307,16 +322,16 @@ export const workData = [
       "Instant messaging app with WebSockets, authentication, and persistent chat storage.",
     bgImage: black_image,
     category: "Full-Stack",
-    link: "/#contact",
+    link: "chatapp.srama.co.in",
     techStack: ["MongoDB", "Express", "React", "Node.js", "Socket.io", "JWT"],
   },
   {
     title: "PDF Helper",
     description:
       "Smart PDF summarizer with processing & management platform for merging, compressing, and splitting files.",
-    bgImage: black_image,
+    bgImage: pdf,
     category: "Full-Stack",
-    link: "/#contact",
+    link: "pdfhelper.srama.co.in",
     techStack: [
       "React",
       "Next.js",
@@ -330,7 +345,7 @@ export const workData = [
     title: "YouTube Summarizer",
     description:
       "Nextjs frontend and Python backend for YouTube summarizer.",
-    bgImage: black_image,
+    bgImage: yt,
     category: "AI",
     link: "/#contact",
     techStack: ["Python", "Nextjs", "youtube_transcript_api", "OpenAI API"],
@@ -348,44 +363,44 @@ export const workData = [
     title: "Bionic Prosthetic Arm",
     description:
       "AI-powered prosthetic arm using EMG signals and RNN-based movement prediction.",
-    bgImage: black_image,
+    bgImage: bpa,
     category: "Robotics",
-    link: "/#contact",
-    techStack: ["Embedded C++", "TensorFlow", "MATLAB", "Arduino"],
+    link: "https://www.indiascienceandtechnology.gov.in/hi/research/design-and-fabrication-active-transradial-bionic-prosthetic-arm",
+    techStack: ["Embedded C++", "Python",  "TensorFlow", "MATLAB", "Arduino"],
   },
   {
     title: "Deep Learning Projects",
     description:
       "Fine-tunned LLM for specific use cases.",
-    bgImage: black_image,
+    bgImage: dl,
     category: "AI",
     link: "/#contact",
-    techStack: ["PyTorch", "TensorFlow", "Keras", "Python","LORA"],
+    techStack: ["LORA","PyTorch", "TensorFlow", "Keras", "Python","LORA"],
   },
   
   {
     title: "Intelligent Patient Care Bed",
     description:
       "Patent-filed smart healthcare system for patient monitoring with sensor integration.",
-    bgImage: black_image,
+    bgImage: ipc,
     category: "Robotics",
-    link: "https://arogayacibiod.in/",
+    link: "https://mdms.icmr.org.in/programs/cibiod.html",
     techStack: ["Python", "MATLAB", "IoT Sensors"],
   },
   {
     title: "Eye-Tracking Wheelchair System",
     description:
       "Assistive wheelchair controlled via eye movement using ML-based direction detection.",
-    bgImage: black_image,
-    category: "Robotics",
-    link: "https://arogayacibiod.in/",
+    bgImage: awps,
+    category: "Machine Learning",
+    link: "https://mdms.icmr.org.in/programs/cibiod.html",
     techStack: ["Python", "TensorFlow", "MATLAB", "OpenCV", "Arduino"],
   },
   {
     title: "Medical Grade 3D Printer",
     description:
       "PEEK-based 3D printer for medical implants with CFD-optimized laminar airflow design.",
-    bgImage: black_image,
+    bgImage: mgp,
     category: "Robotics",
     link: "https://www.ntu.ac.uk/",
     techStack: ["CFD", "Fusion 360", "Python", "MATLAB", "Embedded Control"],
@@ -394,9 +409,9 @@ export const workData = [
     title: "Pick and Place Machine",
     description:
       "Automated device handler for chip segregation built in collaboration with Semiconductor Lab.",
-    bgImage: black_image,
+    bgImage: pickplace,
     category: "Robotics & AI",
-    link: "/#contact",
+    link: "https://www.scl.gov.in/",
     techStack: [
       "OpenCV",
       "Deep Learning",

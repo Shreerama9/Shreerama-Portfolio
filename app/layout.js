@@ -1,4 +1,5 @@
 import { Outfit, Ovo} from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -23,6 +24,8 @@ export const metadata = {
     "Full-Stack Developer",
     "AI Developer",
     "Robotics Engineer",
+    "srama",
+    "Shreerama Shiva",
     "Next.js Developer",
     "React Developer",
     "Python Developer",
@@ -39,19 +42,21 @@ export const metadata = {
   creator: "Shreerama",
   publisher: "Shreerama's Portfolio",
   formatDetection: {
-    email: false,
+    email: true,
     address: false,
-    telephone: false,
+    telephone: true,
   },
   metadataBase: new URL('https://srama.co.in'),
   alternates: {
-    canonical: '/',
+    canonical: '/about',
   },
   openGraph: {
     title: "Shreerama's Portfolio - AI & Full-Stack Developer",
     description: "Expert Full-Stack Developer specializing in AI, Robotics, and Automation. Building intelligent systems with Next.js, React, Python, and cutting-edge technologies.",
     url: 'https://srama.co.in',
     siteName: "Shreerama's Portfolio",
+    emails: ['ai@srama.co.in'],
+    phoneNumbers: ['+918837580847'],
     images: [
       {
         url: '/assets/shreerama-projects/og_image.png',
@@ -121,39 +126,36 @@ export default function RootLayout({ children }) {
       "name": "ThinkMetal Private Limited",
       "address": "Chennai, India"
     },
-    "hasOccupation": {
-      "@type": "Occupation",
-      "description": "Full-Stack Developer and AI Engineer with expertise in building intelligent systems, automation workflows, and innovative web applications",
-      "occupationLocation": {
-        "@type": "Place",
-        "address": "Chennai, India"
-      }
-    }
+    "email": "ai@srama.co.in",
+    "telephone": "+918837580847"
   };
 
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WDXVYF0F2"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-1WDXVYF0F2');
-            `,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          suppressHydrationWarning
         />
       </head>
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
+        suppressHydrationWarning
       >
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1WDXVYF0F2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1WDXVYF0F2');
+          `}
+        </Script>
         {children}
       </body>
     </html>
