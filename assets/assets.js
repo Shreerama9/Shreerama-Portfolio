@@ -313,7 +313,7 @@ export const workData = [
     description: "Landing page for AI-powered platform streamlining post-funeral paperwork with intelligent OCR and automated document processing.",
     bgImage: ff, // You'll need to import/define your background image
     category: "Full Stack AI",
-    link: "http://funeralflow.srama.co.in", // Update with your actual deployed URL
+    link: "http://funeraldesk.srama.co.in", // Update with your actual deployed URL
     techStack: ["Next.js 16", "TypeScript", "Prisma", "NextAuth", "Tailwind CSS"],
   },
   {
