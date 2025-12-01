@@ -3,7 +3,7 @@ import { assets } from "../assets/assets"
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
-const Navbar = ({isDarkMode, setIsDarkMode}) => {
+const Navbar = ({isDarkMode, setIsDarkMode, onBookCallClick}) => {
 
     const [isScroll, setIsScroll] = useState(false)
     const sideMenuRef = useRef();
@@ -49,7 +49,17 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                 <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='Theme toggle icon' className='w-6' />
             </button>
 
-            <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50'>Contact 
+            <button
+                onClick={onBookCallClick}
+                className='hidden lg:flex items-center gap-2 px-6 py-2.5 bg-black text-white rounded-full ml-4 font-Ovo border border-white transition-all duration-500 hover:-translate-y-1 hover:bg-lightHover hover:text-black dark:bg-transparent dark:hover:bg-darkHover dark:hover:shadow-white'
+            >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Book a Call
+            </button>
+
+            <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full font-Ovo dark:border-white/50'>Contact
             <Image src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon} alt="Arrow icon" className='w-3'/></a>
 
             <button className='block md:hidden ml-3' onClick={openMenu}>
@@ -67,6 +77,19 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             <li><a className='font-Ovo' onClick={closeMenu} href="#about">About me</a></li>
             <li><a className='font-Ovo' onClick={closeMenu} href="#work">My Work</a></li>
             <li><a className='font-Ovo' onClick={closeMenu} href="#experience">Professional Experience</a></li>
+            <li>
+                <button
+                    className='font-Ovo text-left w-full px-4 py-2 rounded-lg bg-black text-white border-[0.5px] border-gray-400 transition-all duration-500 hover:bg-lightHover hover:text-black dark:bg-white dark:text-black dark:hover:bg-darkHover dark:hover:text-white'
+                    onClick={() => { closeMenu(); onBookCallClick(); }}
+                >
+                    <span className="flex items-center gap-2">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        Book a Call
+                    </span>
+                </button>
+            </li>
             <li><a className='font-Ovo' onClick={closeMenu} href="#contact">Contact me</a></li>
         </ul>
 

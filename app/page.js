@@ -62,7 +62,13 @@ export default function Home() {
       
       {/* Main Navigation */}
       <header>
-        <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+        <Navbar
+          isDarkMode={isDarkMode}
+          setIsDarkMode={setIsDarkMode}
+          onBookCallClick={() => {
+            window.open('https://calendly.com/srama9/20min', '_blank');
+          }}
+        />
       </header>
       
       {/* Main Content */}
@@ -118,9 +124,9 @@ export default function Home() {
 
       {/* Chatbot Component */}
       <div id="chatbot-container" role="complementary" aria-label="AI Assistant Chatbot">
-        <Chatbot 
-          isOpen={isChatbotOpen} 
-          onClose={() => setIsChatbotOpen(false)} 
+        <Chatbot
+          isOpen={isChatbotOpen}
+          onClose={() => setIsChatbotOpen(false)}
           isDarkMode={isDarkMode}
         />
       </div>
