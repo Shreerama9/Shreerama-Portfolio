@@ -301,14 +301,14 @@ export const educationData = [
 
 export const workData = [
   {
-    title: "Multi-Agent Trading Workflow",
-    description:
-      "AI-driven modular trading system using RAG and logic-based stock selection.",
-    bgImage: multiTrading,
-    category: "AI",
-    link: "/#contact",
-    techStack: ["Python", "LangChain", "n8n", "OpenAI API"],
-  },  {
+  title: "AI-Powered Video Repurposing & Clipping",
+  description:
+    "Full-stack automated system for video repurposing with transcription, intelligent clipping, dynamic overlays, and LLM-based content ranking.",
+  bgImage: ff, 
+  category: "AI/Software",
+  link: "https://aiclipper.sramagency.com", 
+  techStack: ["Python", "Next.js", "Ollama", "FFmpeg", "Supabase", "CUDA 12+"],
+},  {
     title: "FuneralFlow",
     description: "Landing page for AI-powered platform streamlining post-funeral paperwork with intelligent OCR and automated document processing.",
     bgImage: ff, // You'll need to import/define your background image
