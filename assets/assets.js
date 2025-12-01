@@ -313,7 +313,7 @@ export const workData = [
     description: "Landing page for AI-powered platform streamlining post-funeral paperwork with intelligent OCR and automated document processing.",
     bgImage: ff, // You'll need to import/define your background image
     category: "Full Stack AI",
-    link: "http://funeraldesk.sramagency.com", // Update with your actual deployed URL
+    link: "http://funeralflow.sramagency.com", // Update with your actual deployed URL
     techStack: ["Next.js 16", "TypeScript", "Prisma", "NextAuth", "Tailwind CSS"],
   },
   {
@@ -323,6 +323,7 @@ export const workData = [
     bgImage: black_image,
     category: "Full-Stack",
     link: "http://chatapp.sramagency.com",
+    link: "http://chatapp.sramagency.com",
     techStack: ["MongoDB", "Express", "React", "Node.js", "Socket.io", "JWT"],
   },
   {
@@ -331,6 +332,7 @@ export const workData = [
       "Smart PDF summarizer with processing & management platform for merging, compressing, and splitting files.",
     bgImage: pdf,
     category: "Full-Stack",
+    link: "http://pdfhelper.sramagency.com",
     link: "http://pdfhelper.sramagency.com",
     techStack: [
       "React",
