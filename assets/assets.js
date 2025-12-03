@@ -68,7 +68,7 @@ import { GraduationCap , Box , HeartPlus} from "lucide-react";
 
 
 export const assets = {
-  
+
   code_icon,
   code_icon_dark,
   edu_icon,
@@ -82,7 +82,7 @@ export const assets = {
   logo_dark,
   mail_icon,
   mail_icon_dark,
-  
+
   download_icon,
   hand_icon,
   header_bg_color,
@@ -211,7 +211,7 @@ export const profExpData = [
      "Built a functional Automated Device Handler for semiconductor chip segregation with synchronized hardware/software control.",
     "Developed a self-aligning nozzle system using OpenCV and a lightweight deep learning model to enhance positioning accuracy.",
     "Led integration of motion systems, embedded controllers, and test harnesses — achieving precise, repeatable alignment cycles.",
-    "Operated within a government R&D environment while shipping production-grade prototypes under strict process and safety constraints."      
+    "Operated within a government R&D environment while shipping production-grade prototypes under strict process and safety constraints."
     ],
     tech: ["Embedded Systems", "Computer Vision", "OpenCV", "Deep Learning", "Automation", "Hardware Integration","Python", "Arduino", "C++", "MATLAB", "Fusion 360", "Ansys"],
     icon: "Sparkles"
@@ -282,8 +282,8 @@ export const profExpData = [
       url: "https://www.youtube.com/watch?v=qCAqEToQAXM&ab_channel=CredibleFutureIndia"
     }
   }
-  
-  
+
+
 ];
 
 export const educationData = [
@@ -305,17 +305,17 @@ export const educationData = [
 
 export const workData = [
   {
-  title: "AI-Powered Video Clipper & Repurposer",
-  description: "A full-stack application designed to automate video clipping, transcription, candidate generation, and ranking. It features a modern Next.js frontend, a Python backend (likely FastAPI) forprocessing, and utilizes Supabase for robust data management. The system is geared towards efficient content repurposing, especially for affiliate marketing.",
-  bgImage: aiclip,
-  category: "Full-Stack AI",
-  link : "https://aiclipper.sramagency.com",
-  techStack: ["Next.js", "React", "Tailwind CSS", "Python", "FastAPI", "CUDA12+", "Docker", "FFmpeg", "FasterWhisper"]
+    title: "AI-Powered Video Clipper & Repurposer",
+    description: "A full-stack application designed to automate video clipping, transcription, candidate generation, and ranking. It features a modern Next.js frontend, a Python backend (likely FastAPI) forprocessing, and utilizes Supabase for robust data management. The system is geared towards efficient content repurposing, especially for affiliate marketing.",
+    bgImage: aiclip,
+    category: "Full-Stack AI",
+    link : "https://aiclipper.sramagency.com",
+    techStack: ["Next.js", "React", "Tailwind CSS", "Python", "FastAPI", "CUDA12+", "Docker", "FFmpeg", "FasterWhisper"]
   },
-    {
+  {
     title: "FuneralFlow",
     description: "Landing page for AI-powered platform streamlining post-funeral paperwork with intelligent OCR and automated document processing.",
-    bgImage: ff, 
+    bgImage: ff,
     category: "Full Stack AI",
     link: "https://funeraldesk.sramagency.com", // Update with your actual deployed URL
     techStack: ["Next.js 16", "TypeScript", "Prisma", "NextAuth", "Tailwind CSS"],
@@ -329,7 +329,7 @@ export const workData = [
     link: "/#contact",
     techStack: ["Python", "LangChain", "n8n", "OpenAI API"],
   },
-  
+
   {
     title: "Real-Time Chat App",
     description:
@@ -392,7 +392,7 @@ export const workData = [
     link: "/#contact",
     techStack: ["LORA","PyTorch", "TensorFlow", "Keras", "Python","LORA"],
   },
-  
+
   {
     title: "Intelligent Patient Care Bed",
     description:
