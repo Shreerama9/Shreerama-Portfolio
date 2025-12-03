@@ -5,6 +5,7 @@ import ai_agent_icon from "./deeplearning-icon.png"; // Using deeplearning-icon 
 import search_icon from "./send-icon.png"; // Using send-icon as placeholder for search
 import shreerama_image from "./shreerama-projects/shreerama-image.png";
 import multiTrading from "./shreerama-projects/multiTrading.jpg"
+import chat from "./shreerama-projects/chat.png"
 
 
 import code_icon from "./code-icon.png";
@@ -51,6 +52,7 @@ import dl from "./shreerama-projects/dl.png"
 import pdf from "./shreerama-projects/PDF.png"
 import pickplace from "./shreerama-projects/pickplace.png"
 import yt from "./shreerama-projects/yt.png"
+import aiclip from  "./shreerama-projects/aiclip.png"
 
 {/* shreerama projects*/}
 import logo_svg from "./shreerama-projects/logo.svg";
@@ -131,7 +133,9 @@ export const assets = {
   dl,
   pdf,
   pickplace,
-  yt
+  yt,
+  aiclip,
+  chat
 
 
 
@@ -301,6 +305,22 @@ export const educationData = [
 
 export const workData = [
   {
+  title: "AI-Powered Video Clipper & Repurposer",
+  description: "A full-stack application designed to automate video clipping, transcription, candidate generation, and ranking. It features a modern Next.js frontend, a Python backend (likely FastAPI) forprocessing, and utilizes Supabase for robust data management. The system is geared towards efficient content repurposing, especially for affiliate marketing.",
+  bgImage: aiclip,
+  category: "Full-Stack AI",
+  link : "https://aiclipper.sramagency.com",
+  techStack: ["Next.js", "React", "Tailwind CSS", "Python", "FastAPI", "CUDA12+", "Docker", "FFmpeg", "FasterWhisper"]
+  },
+    {
+    title: "FuneralFlow",
+    description: "Landing page for AI-powered platform streamlining post-funeral paperwork with intelligent OCR and automated document processing.",
+    bgImage: ff, 
+    category: "Full Stack AI",
+    link: "https://funeraldesk.sramagency.com", // Update with your actual deployed URL
+    techStack: ["Next.js 16", "TypeScript", "Prisma", "NextAuth", "Tailwind CSS"],
+  },
+  {
     title: "Multi-Agent Trading Workflow",
     description:
       "AI-driven modular trading system using RAG and logic-based stock selection.",
@@ -308,21 +328,14 @@ export const workData = [
     category: "AI",
     link: "/#contact",
     techStack: ["Python", "LangChain", "n8n", "OpenAI API"],
-  },  {
-    title: "FuneralFlow",
-    description: "Landing page for AI-powered platform streamlining post-funeral paperwork with intelligent OCR and automated document processing.",
-    bgImage: ff, // You'll need to import/define your background image
-    category: "Full Stack AI",
-    link: "http://funeraldesk.sramagency.com", // Update with your actual deployed URL
-    techStack: ["Next.js 16", "TypeScript", "Prisma", "NextAuth", "Tailwind CSS"],
   },
+  
   {
     title: "Real-Time Chat App",
     description:
       "Instant messaging app with WebSockets, authentication, and persistent chat storage.",
-    bgImage: black_image,
+    bgImage: chat,
     category: "Full-Stack",
-    link: "http://chatapp.sramagency.com",
     link: "http://chatapp.sramagency.com",
     techStack: ["MongoDB", "Express", "React", "Node.js", "Socket.io", "JWT"],
   },

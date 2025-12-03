@@ -18,7 +18,7 @@ const Header = () => {
       whileInView={{y: 0, opacity: 1}}
       transition={{duration: 0.6, delay: 0.3}}
       className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
-            Hi, I’m Shreerama Shiva Sai Bharadwaja — but you can just call me Shreerama.</motion.h3>
+            Shreerama Shiva Sai Bharadwaja</motion.h3>
     <motion.h1 
     initial={{y: -30, opacity: 0}}
     whileInView={{y: 0, opacity: 1}}
@@ -31,7 +31,7 @@ const Header = () => {
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay: 0.7}}
         className='max-w-2xl mx-auto font-Ovo'>
-        creating Full stack applications, agentic AI systems and SaaS products that blend functionality with intelligence.
+        I love shipping intelligent products—whether hardware like compact 3D printers or SaaS apps blending agentic AI, full-stack dev, and seamless functionality.
         </motion.p>
 
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
