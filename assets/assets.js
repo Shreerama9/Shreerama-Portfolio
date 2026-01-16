@@ -53,6 +53,8 @@ import pdf from "./shreerama-projects/PDF.png"
 import pickplace from "./shreerama-projects/pickplace.png"
 import yt from "./shreerama-projects/yt.png"
 import aiclip from  "./shreerama-projects/aiclip.png"
+import storyboard_ai from "./shreerama-projects/storyboard-ai-bg.png"
+import orgaflow from "./shreerama-projects/orgaflow-bg.png"
 
 {/* shreerama projects*/}
 import logo_svg from "./shreerama-projects/logo.svg";
@@ -135,7 +137,9 @@ export const assets = {
   pickplace,
   yt,
   aiclip,
-  chat
+  chat,
+  storyboard_ai,
+  orgaflow
 
 
 
@@ -304,6 +308,22 @@ export const educationData = [
 
 
 export const workData = [
+  {
+    title: "StoryBoardAI",
+    description: "Collaborative script-to-storyboard platform using AI scene analysis to streamline visual storytelling.",
+    bgImage: storyboard_ai,
+    category: "AI",
+    link: "/#contact",
+    techStack: ["Next.js", "Python", "OpenAI", "Stable Diffusion", "Tailwind CSS"]
+  },
+  {
+    title: "OrgaFlow",
+    description: "Scalable multi-tenant project management platform with real-time updates and advanced GraphQL API.",
+    bgImage: orgaflow,
+    category: "Full-Stack",
+    link: "/#contact",
+    techStack: ["React", "Node.js", "GraphQL", "PostgreSQL", "Docker"]
+  },
   {
     title: "AI-Powered Video Clipper & Repurposer",
     description: "A full-stack application designed to automate video clipping, transcription, candidate generation, and ranking. It features a modern Next.js frontend, a Python backend (likely FastAPI) forprocessing, and utilizes Supabase for robust data management. The system is geared towards efficient content repurposing, especially for affiliate marketing.",

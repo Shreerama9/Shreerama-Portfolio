@@ -1,88 +1,176 @@
 import { assets, workData } from "../assets/assets";
 import Image from "next/image";
-import React from "react";
-import { motion } from "motion/react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Users, Cpu, Globe, ArrowRight } from "lucide-react";
+import { ContainerScroll } from "./ui/container-scroll-animation";
 
 const Work = ({ isDarkMode }) => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+  });
+
+  // Stage 1: Tilt (0% to 25% of scroll)
+  // Stage 2: Horizontal Scroll (25% to 90% of scroll)
+  const rotateX = useTransform(scrollYProgress, [0, 0.25], [20, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.25], [1.05, 1]);
+  
+  // Keep the header fixed while tilting and during most of the horizontal scroll
+  const translate = useTransform(scrollYProgress, [0, 0.85, 1], [0, 0, -150]);
+  const opacity = useTransform(scrollYProgress, [0, 0.85, 1], [1, 1, 0]);
+  
+  // Horizontal scroll of projects inside the container
+  const horizontalX = useTransform(scrollYProgress, [0.25, 0.9], ["0%", "-85%"]);
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      id="work"
-      className="w-full px-[12%] py-10 scroll-mt-20"
-    >
-      <motion.h2
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-        className="text-center text-5xl font-Ovo"
-      >
-        My latest work
-      </motion.h2>
+    <div id="work" className="bg-transparent" ref={containerRef}>
+      <div className="h-[600vh] relative">
+        <div className="sticky top-0 h-screen flex flex-col items-center justify-center pt-20 md:pt-28 overflow-hidden">
+          
+          <div className="w-full relative" style={{ perspective: "1000px" }}>
+            {/* Header section inside the scroll flow */}
+            <motion.div
+              style={{ translateY: translate, opacity }}
+              className="max-w-6xl mx-auto text-center mb-10 md:mb-12 px-4"
+            >
+              <h1 className="flex flex-col gap-2 md:gap-4 font-Outfit text-center tracking-tighter">
+                 <span className="text-3xl md:text-5xl font-bold text-black dark:text-white leading-none">
+                    Building the Future with
+                 </span>
+                 <span className="text-5xl md:text-[110px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 dark:from-blue-400 dark:via-purple-400 dark:to-blue-300 leading-none pb-4">
+                    Agentic Intelligence
+                 </span>
+              </h1>
+            </motion.div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
-      >
-        Explore my latest full-stack AI creations — where web engineering meets
-        intelligence. From dynamic frontends to scalable backends, every project
-        here reflects my mission to build smarter, faster, and more intuitive
-        digital systems that think alongside their users.
-      </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.6 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-10 gap-6 dark:text-black"
-      >
-        {workData.map((project, index) => (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            key={index}
-            className="opacity-70 aspect-[4/3] sm:aspect-square bg-no-repeat bg-cover bg-center rounded-xl relative cursor-pointer group overflow-hidden"
-            style={{ backgroundImage: `url(${project.bgImage.src})` }}
-          >
-            <div
-              className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent 
-                dark:from-white/40 dark:via-white/10 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-            <div className="bg-white/95 dark:bg-gray-900/95 w-11/12 rounded-lg absolute bottom-4 left-1/2 -translate-x-1/2 p-4 flex flex-col gap-2 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
-              <h2 className="font-bold text-base sm:text-lg text-gray-900 dark:text-white line-clamp-1">
-                {project.title}
-              </h2>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed">
-                {project.description}
-              </p>
-              <div className="flex items-center justify-between mt-2">
-                <span className="text-xs font-medium text-gray-600 dark:text-gray-300 px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
-                  {project.category}
-                </span>
-                <div className="border rounded-full border-black dark:border-white w-8 h-8 flex items-center justify-center shadow-[2px_2px_0_#000] dark:shadow-[2px_2px_0_#fff] group-hover:bg-lime-300 dark:group-hover:bg-lime-600 transition">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+            {/* The "Tab" / Container */}
+            <motion.div
+              style={{
+                rotateX,
+                scale,
+                boxShadow:
+                  "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
+              }}
+              className="max-w-6xl mx-auto h-[50vh] md:h-[70vh] w-[95vw] border-[6px] border-[#E6D8DE] p-2 md:p-6 bg-[#222222] rounded-[40px] shadow-2xl overflow-hidden relative"
+            >
+               {/* Inner Project Track */}
+               <div className="h-full w-full bg-gray-100 dark:bg-zinc-900 rounded-3xl overflow-hidden relative flex items-center">
+                  <motion.div 
+                    style={{ x: horizontalX }} 
+                    className="flex gap-8 px-10 items-center h-full"
                   >
-                    <Image
-                      src={
-                        isDarkMode ? assets.send_icon_dark : assets.send_icon
-                      }
-                      alt="Send icon"
-                      className="w-4"
-                    />
-                  </a>
-                </div>
+                    {workData.map((project, index) => (
+                      <motion.div
+                        key={index}
+                        whileHover={{ y: -10 }}
+                        className="group relative h-[80%] w-[350px] md:w-[450px] flex-shrink-0 bg-white dark:bg-zinc-800 rounded-[30px] shadow-xl overflow-hidden border border-gray-100 dark:border-zinc-700 p-8 flex flex-col justify-between"
+                      >
+                        <div className="absolute top-0 right-0 w-2/3 h-full opacity-5 group-hover:opacity-10 transition-opacity">
+                           <Image 
+                             src={project.bgImage} 
+                             alt="" 
+                             layout="fill" 
+                             objectFit="cover" 
+                             className="grayscale group-hover:grayscale-0 transition-all duration-700"
+                           />
+                        </div>
+
+                        <div className="relative z-10 flex flex-col h-full justify-between">
+                          <div>
+                            <div className="flex justify-between items-start mb-4">
+                              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight">
+                                {project.title}
+                              </h3>
+                              <div className="w-10 h-10 rounded-full border border-gray-200 dark:border-zinc-700 flex items-center justify-center group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                <ArrowRight size={18} className="group-hover:text-white dark:group-hover:text-black transition-colors" />
+                              </div>
+                            </div>
+                            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base leading-relaxed">
+                              {project.description}
+                            </p>
+                          </div>
+
+                          <div className="flex items-center justify-between mt-4">
+                            <div className="flex gap-2">
+                              {project.techStack?.slice(0, 2).map((tech, i) => (
+                                <span key={i} className="text-[9px] uppercase tracking-widest font-bold px-2 py-1 bg-gray-50 dark:bg-zinc-900 text-gray-400 rounded-lg border border-gray-100 dark:border-zinc-700">
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                            <span className="text-xs font-medium text-gray-300 dark:text-zinc-600">
+                              0{index + 1}
+                            </span>
+                          </div>
+                        </div>
+
+                        <a 
+                          href={project.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="absolute inset-0 z-20"
+                        />
+                      </motion.div>
+                    ))}
+                  </motion.div>
+               </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Decorative "Personality" Section */}
+      <div className="max-w-5xl mx-auto px-6 py-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="flex-1">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 font-Outfit">
+              Impactful Innovation
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg mb-8">
+              Shipping products is about solving real problems. From semiconductor handling to assistive healthcare, my work is driven by curiosity and a commitment to engineering excellence.
+            </p>
+            <div className="flex gap-4">
+               {[
+                 { label: "Systems Built", value: "12+", icon: <Cpu className="text-blue-500" /> },
+                 { label: "Patents Filed", value: "2", icon: <Globe className="text-purple-500" /> }
+               ].map((stat, i) => (
+                 <div key={i} className="bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-zinc-700 flex flex-col items-center min-w-[120px]">
+                   {stat.icon}
+                   <span className="text-2xl font-bold text-gray-900 dark:text-white mt-2">{stat.value}</span>
+                   <span className="text-xs text-gray-500 uppercase tracking-widest">{stat.label}</span>
+                 </div>
+               ))}
+            </div>
+          </div>
+
+          <div className="relative group">
+            <div className="flex -space-x-4">
+              {[
+                "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200",
+                "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200&h=200",
+                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200",
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200"
+              ].map((url, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ y: -10, rotate: 5, zIndex: 50 }}
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-white dark:border-zinc-900 overflow-hidden shadow-2xl relative cursor-pointer ring-2 ring-gray-100 dark:ring-zinc-800"
+                >
+                  <img src={url} alt={`Team member ${i}`} className="w-full h-full object-cover" />
+                </motion.div>
+              ))}
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-blue-600 text-white flex items-center justify-center border-4 border-white dark:border-zinc-900 font-bold text-sm shadow-2xl ring-2 ring-gray-100 dark:ring-zinc-800">
+                +15
               </div>
             </div>
-          </motion.div>
-        ))}
-      </motion.div>
-    </motion.div>
+            <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 italic text-center md:text-left flex items-center gap-2 justify-center md:justify-start">
+              <Users size={14} /> Leveraging collaboration for global scale
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
