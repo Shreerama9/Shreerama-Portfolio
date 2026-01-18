@@ -11,17 +11,17 @@ const Work = ({ isDarkMode }) => {
     target: containerRef,
   });
 
-  // Stage 1: Tilt (0% to 25% of scroll)
-  // Stage 2: Horizontal Scroll (25% to 90% of scroll)
-  const rotateX = useTransform(scrollYProgress, [0, 0.25], [20, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.25], [1.05, 1]);
+  // Stage 1: Tilt (0% to 20% of scroll)
+  // Stage 2: Horizontal Scroll (20% to 95% of scroll)
+  const rotateX = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [1.05, 1]);
   
   // Keep the header fixed while tilting and during most of the horizontal scroll
-  const translate = useTransform(scrollYProgress, [0, 0.85, 1], [0, 0, -150]);
-  const opacity = useTransform(scrollYProgress, [0, 0.85, 1], [1, 1, 0]);
+  const translate = useTransform(scrollYProgress, [0, 0.9, 1], [0, 0, -150]);
+  const opacity = useTransform(scrollYProgress, [0, 0.9, 1], [1, 1, 0]);
   
-  // Horizontal scroll of projects inside the container
-  const horizontalX = useTransform(scrollYProgress, [0.25, 0.9], ["0%", "-85%"]);
+  // Horizontal scroll of projects inside the container - extended to 95%
+  const horizontalX = useTransform(scrollYProgress, [0.2, 0.95], ["0%", "-85%"]);
 
   return (
     <div id="work" className="bg-transparent" ref={containerRef}>
@@ -144,28 +144,27 @@ const Work = ({ isDarkMode }) => {
             </div>
           </div>
 
-          <div className="relative group">
-            <div className="flex -space-x-4">
-              {[
-                "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200",
-                "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200&h=200",
-                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200",
-                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200"
-              ].map((url, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ y: -10, rotate: 5, zIndex: 50 }}
-                  className="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-white dark:border-zinc-900 overflow-hidden shadow-2xl relative cursor-pointer ring-2 ring-gray-100 dark:ring-zinc-800"
-                >
-                  <img src={url} alt={`Team member ${i}`} className="w-full h-full object-cover" />
-                </motion.div>
-              ))}
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-blue-600 text-white flex items-center justify-center border-4 border-white dark:border-zinc-900 font-bold text-sm shadow-2xl ring-2 ring-gray-100 dark:ring-zinc-800">
-                +15
-              </div>
-            </div>
-            <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 italic text-center md:text-left flex items-center gap-2 justify-center md:justify-start">
-              <Users size={14} /> Leveraging collaboration for global scale
+          <div className="flex flex-col items-center md:items-end gap-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative group cursor-pointer"
+            >
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <a 
+                href="#contact" 
+                className="relative px-10 py-5 bg-white dark:bg-zinc-900 rounded-full leading-none flex items-center gap-3"
+              >
+                <span className="text-gray-900 dark:text-white font-bold text-lg">Join Me</span>
+                <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white group-hover:translate-x-1 transition-transform">
+                  <ArrowRight size={18} />
+                </div>
+              </a>
+            </motion.div>
+            
+            <p className="text-sm text-gray-500 dark:text-gray-400 italic text-center md:text-right flex items-center gap-2">
+              <Users size={14} /> Available for new collaborations
             </p>
           </div>
         </div>
