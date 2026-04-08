@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect, useRef } from 'react';
 import { Briefcase, Code, Brain, Sparkles, Search, Cpu, GraduationCap, Box, Trophy, HeartPlus } from 'lucide-react';
 import { motion } from "framer-motion";

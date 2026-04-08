@@ -41,6 +41,7 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import black_image from "./shreerama-projects/Black_colour.jpg";
+import piaxis_platform from "./shreerama-projects/piaxis-platform.png";
 import send_icon_dark from "./send-icon-dark.png";
 import chatBot from "./shreerama-projects/chatbot.jpg"
 import awps from "./shreerama-projects/AWPS1.png"
@@ -195,7 +196,7 @@ export const profExpData = [
   {
     company: "Piaxis, Chennai",
     role: "Founding AI Engineer",
-    tenure: "Jan 2025 – Present",
+    tenure: "March 2026 – Present",
     highlights: [
       "Founding Full-Stack AI Engineer on the Piaxis platform — an AI-powered architectural detail management system for the AEC industry, integrating with Autodesk Revit for intelligent detail discovery, placement, and workflow automation.",
       "Built a multi-version Revit plugin in C# (.NET Framework 4.8 / .NET 8.0, WPF) supporting Revit 2023–2026, enabling architects to authenticate, browse, and directly download architectural details into active Revit projects; shipped with WiX MSI and Inno Setup installers with code-signing support.",
@@ -211,7 +212,7 @@ export const profExpData = [
   {
     company: "ThinkMetal Private Limited, Chennai",
     role: "New Product Development Lead · Founding Engineer",
-    tenure: "Jan 2023 – Dec 2024",
+    tenure: "Jan 2023 – Feb 2026",
     highlights: [
       "Leading product strategy and end-to-end execution for compact metal 3D printers — from rapid prototyping to production-ready designs.",
       "Built and validated core toolhead and furnace subsystems, reducing iteration cycles and accelerating time-to-MVP.",
@@ -326,9 +327,9 @@ export const workData = [
     title: "Piaxis AI Platform",
     description:
       "Founding AI Engineer role — built a full-stack AEC platform integrating Autodesk Revit with a LangGraph multi-agent system (40+ tools), FastAPI backend (45+ endpoints), Weaviate vector search, and a Next.js 15 / React 19 web app with Supabase multi-tenant RLS. Shipped a multi-version C# Revit plugin (2023–2026) and exposed Revit agents as MCP-compatible endpoints.",
-    bgImage: black_image,
+    bgImage: piaxis_platform,
     category: "Full-Stack AI · AEC",
-    link: "https://piaxis.com",
+    link: "https://app.piaxis.ai/auth",
     techStack: ["LangGraph", "MCP", "C# / .NET 8", "Revit API", "Autodesk APS", "FastAPI", "Next.js 15", "Supabase", "Weaviate", "PostgreSQL", "OpenAI", "AWS Bedrock"],
   },
   {

@@ -1,3 +1,4 @@
+'use client'
 import { assets, infoList } from "../assets/assets"
 import Image from 'next/image'
 import React from 'react'

@@ -12,6 +12,7 @@ export default function ChatbotPage() {
     if (typeof window !== 'undefined') {
       const theme = localStorage.getItem('theme');
       if (theme === 'dark') {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsDarkMode(true);
         document.documentElement.classList.add('dark');
       }
@@ -57,7 +58,7 @@ export default function ChatbotPage() {
             Chat with Shreerama AI
           </h1>
           <p className={`text-lg mb-8 font-Outfit ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-            I'm your AI assistant powered by Shreerama's professional experience and expertise. 
+            I&apos;m your AI assistant powered by Shreerama&apos;s professional experience and expertise.
             Ask me about his projects, technical skills, or career journey.
           </p>
           
