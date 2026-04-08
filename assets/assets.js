@@ -53,6 +53,7 @@ import pdf from "./shreerama-projects/PDF.png"
 import pickplace from "./shreerama-projects/pickplace.png"
 import yt from "./shreerama-projects/yt.png"
 import aiclip from  "./shreerama-projects/aiclip.png"
+import storyboard from "./shreerama-projects/storyboard-ai.png"
 
 {/* shreerama projects*/}
 import logo_svg from "./shreerama-projects/logo.svg";
@@ -135,6 +136,7 @@ export const assets = {
   pickplace,
   yt,
   aiclip,
+  storyboard,
   chat
 
 
@@ -148,42 +150,42 @@ export const infoList = [
     iconDark: assets.code_icon_dark,
     title: "Languages & Frameworks",
     description:
-      "Python, JavaScript, TypeScript, Node.js, React, Next.js, Express.js, MongoDB, MATLAB"
+      "Python, TypeScript, JavaScript, C#, Node.js, React 18/19, Next.js (App Router), FastAPI, Express.js, .NET 8, WPF, MATLAB",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Education",
     description:
-      "B.E. in Mechanical Engineering, Panjab University (UIET) | Specialized in AI, Automation & Robotics",
+      "B.E. in Mechanical Engineering, Panjab University (UIET) | GPA 7.87/10 | Specialized in AI, Automation & Robotics",
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
     title: "Projects & Systems Built",
     description:
-      "Multiple projects across Full-Stack, AI, and Robotics — including Model Context Protocol, Multi-Agent Trading Workflow, RAG Systems, and Intelligent Patient Care Devices",
+      "15+ production projects across Full-Stack AI, Agentic Systems, Revit Plugins, RAG Pipelines, SaaS Platforms, and Robotics",
   },
   {
     icon: assets.deeplearning_icon,
     iconDark: assets.deeplearning_icon_dark,
     title: "AI & Agents",
     description:
-      "Experience with LangChain, Model Context Protocol, OpenAI SDK, LlamaIndex, Chroma, FAISS, Pydantic and multi-agent automation workflows",
+      "LangGraph (ReAct, Multi-Agent, Hierarchical Sub-Agents), LangChain, MCP (Model Context Protocol), OpenAI, Anthropic, AWS Bedrock, Groq, RAG Pipelines, Vector DBs (Weaviate, Chroma, FAISS, pgvector)",
   },
   {
     icon: assets.cloud_icon,
     iconDark: assets.cloud_icon_dark,
     title: "Cloud & DevOps",
     description:
-      "Docker, CI/CD with GitHub Actions, Vercel Deployments",
+      "Docker, GCP, CI/CD Pipelines, Supabase, PostgreSQL, Redis, Autodesk APS (Design Automation, OSS), Vercel, Linux, structlog",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Patents & Research",
     description:
-      "Filed 2 patents — Active Transradial Bionic Arm and Intelligent Patient Care Bed | 2 research papers on cranial implant optimization",
+      "3 granted/filed patents — AI Patient Care Bed, Bionic Prosthetic Arm, Adaptive 3D Printer Bed (WIPO WO2025099745A1) | 2 peer-reviewed publications on cranial implant optimization",
   },
 ];
 
@@ -191,9 +193,25 @@ export const infoList = [
 
 export const profExpData = [
   {
+    company: "Piaxis, Chennai",
+    role: "Founding AI Engineer",
+    tenure: "Jan 2025 – Present",
+    highlights: [
+      "Founding Full-Stack AI Engineer on the Piaxis platform — an AI-powered architectural detail management system for the AEC industry, integrating with Autodesk Revit for intelligent detail discovery, placement, and workflow automation.",
+      "Built a multi-version Revit plugin in C# (.NET Framework 4.8 / .NET 8.0, WPF) supporting Revit 2023–2026, enabling architects to authenticate, browse, and directly download architectural details into active Revit projects; shipped with WiX MSI and Inno Setup installers with code-signing support.",
+      "Engineered an AI agent service using LangGraph with 40+ specialized tools for automated Revit detailing workflows covering component placement, detail creation, smart placement analysis, and element discovery.",
+      "Built a FastAPI backend integrating Autodesk APS (Design Automation, OSS), Weaviate vector DB, PostgreSQL, and OpenAI across 45+ endpoints for RVT file processing, metadata extraction, batch indexing, and semantic search.",
+      "Developed a production Next.js 15 / React 19 web platform with Supabase multi-tenant backend, RLS, AI-powered chat via LangGraph SDK, vector search, bulk operations cart, and automated PDF processing pipelines.",
+      "Architected a stateful LangGraph ReAct agent system with hierarchical sub-agents (Piaxis Agent, Command Executor, Placement Agent), shared typed state, and structured tool-call chaining for multi-step Revit automation with full auditability.",
+      "Leveraged LangGraph API's built-in MCP routing layer to expose Piaxis agents as MCP-compatible endpoints, enabling external AI clients to interact with Revit automation agents through a standardized protocol interface.",
+    ],
+    tech: ["LangGraph", "LangChain", "MCP", "C#", ".NET 8", "WPF", "Revit API", "Autodesk APS", "FastAPI", "Next.js 15", "React 19", "Supabase", "PostgreSQL", "Weaviate", "OpenAI", "AWS Bedrock", "Groq", "Docker"],
+    icon: "Sparkles"
+  },
+  {
     company: "ThinkMetal Private Limited, Chennai",
     role: "New Product Development Lead · Founding Engineer",
-    tenure: "Jan 2023 – Present",
+    tenure: "Jan 2023 – Dec 2024",
     highlights: [
       "Leading product strategy and end-to-end execution for compact metal 3D printers — from rapid prototyping to production-ready designs.",
       "Built and validated core toolhead and furnace subsystems, reducing iteration cycles and accelerating time-to-MVP.",
@@ -304,6 +322,60 @@ export const educationData = [
 
 
 export const workData = [
+  {
+    title: "Piaxis AI Platform",
+    description:
+      "Founding AI Engineer role — built a full-stack AEC platform integrating Autodesk Revit with a LangGraph multi-agent system (40+ tools), FastAPI backend (45+ endpoints), Weaviate vector search, and a Next.js 15 / React 19 web app with Supabase multi-tenant RLS. Shipped a multi-version C# Revit plugin (2023–2026) and exposed Revit agents as MCP-compatible endpoints.",
+    bgImage: black_image,
+    category: "Full-Stack AI · AEC",
+    link: "https://piaxis.com",
+    techStack: ["LangGraph", "MCP", "C# / .NET 8", "Revit API", "Autodesk APS", "FastAPI", "Next.js 15", "Supabase", "Weaviate", "PostgreSQL", "OpenAI", "AWS Bedrock"],
+  },
+  {
+    title: "AEGIS — AEO & GEO Content Intelligence",
+    description:
+      "FastAPI service with two AI-powered features: an AEO Content Scorer (direct answer detection, H-tag hierarchy, Flesch-Kincaid readability — scored 0–100) and a Query Fan-Out Engine that generates 10–15 intent-typed sub-queries via LLM with SSE streaming, gap analysis via sentence-transformers cosine similarity, and retry logic with exponential backoff.",
+    bgImage: black_image,
+    category: "AI · NLP · API",
+    link: "https://github.com/Shreerama9",
+    techStack: ["Python", "FastAPI", "OpenAI", "spaCy", "sentence-transformers", "trafilatura", "SSE", "Docker"],
+  },
+  {
+    title: "Architectural Detail Library",
+    description:
+      "Full-stack architectural knowledge platform with fast search, rule-based matching, and AI-powered contextual recommendations. Implemented a RAG pipeline using vector embeddings, semantic search, and LLM-generated technical explanations with PostgreSQL RLS and a responsive React dashboard.",
+    bgImage: black_image,
+    category: "Full-Stack AI · RAG",
+    link: "https://github.com/Shreerama9/Architectural-Detail-Library",
+    techStack: ["Python", "FastAPI", "PostgreSQL", "pgvector", "SQLAlchemy", "React", "Vite", "Tailwind CSS", "Sentence Transformers"],
+  },
+  {
+    title: "StoryBoardAI",
+    description:
+      "Collaborative AI-powered storyboarding platform that converts raw scripts into structured storyboards using AI-based scene analysis. Features real-time multi-user editing, drag-and-drop scene sequencing, and PDF export with glassmorphism UI and motion animations.",
+    bgImage: storyboard,
+    category: "Full-Stack AI",
+    link: "https://aiclipper.sramagency.com",
+    techStack: ["React", "Vite", "Tailwind CSS", "Node.js", "MongoDB", "Socket.io"],
+  },
+  {
+    title: "X-Ray SDK — Decision Forensics",
+    description:
+      "Observability SDK and API explaining why non-deterministic pipelines (LLMs, ranking systems) make specific decisions. Features a decision-centric data model (Run→Step→CandidateDecision), a fire-and-forget Python SDK with graceful degradation, and cross-pipeline forensic querying.",
+    bgImage: black_image,
+    category: "AI · Observability",
+    link: "https://github.com/Shreerama9/X-Ray-system-EQ",
+    techStack: ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Pydantic", "Pytest"],
+  },
+  {
+    title: "OrgaFlow — Multi-Tenant Project Management",
+    description:
+      "Multi-tenant SaaS platform with strict data isolation and role-based access control. Designed GraphQL APIs, real-time subscriptions, and Kanban-style task workflows with scalable frontend and backend architecture for multi-organization collaboration.",
+    bgImage: black_image,
+    category: "Full-Stack · SaaS",
+    link: "https://github.com/Shreerama9/orgaflow",
+    techStack: ["React", "TypeScript", "Apollo Client", "Python", "Django", "GraphQL", "PostgreSQL"],
+  },
   {
     title: "AI-Powered Video Clipper & Repurposer",
     description: "A full-stack application designed to automate video clipping, transcription, candidate generation, and ranking. It features a modern Next.js frontend, a Python backend (likely FastAPI) forprocessing, and utilizes Supabase for robust data management. The system is geared towards efficient content repurposing, especially for affiliate marketing.",

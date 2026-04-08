@@ -35,8 +35,8 @@ const About = ({isDarkMode}) => {
             transition={{duration: 0.6, delay: 0.8}}
             className='flex-1'>
                 <p className='mb-10 max-w-2xl font-Ovo'
-                >Full-Stack AI Engineer passionate about crafting agentic AI systems and SaaS platforms that merge intelligence with usability. Experienced in building RAG pipelines, automation tools, and production-ready web applications.
-                Proven track record in research (3 patents, 2 publications) and delivering real-world solutions across healthcare, semiconductor, and industrial domains.</p>
+                >Full-Stack AI Engineer building intelligent automation systems, multi-agent architectures, and AI-driven SaaS platforms. Currently Founding AI Engineer at Piaxis — architecting LangGraph-based Revit automation agents, Autodesk APS-integrated data pipelines, and MCP-compatible AI endpoints for the AEC industry.
+                Experienced in RAG pipelines, LLM workflow orchestration, and shipping production-grade systems from plugin to platform. Proven track record across research (3 patents, 2 publications) and real-world delivery in AEC, healthcare, semiconductor, and industrial domains.</p>
                 <motion.ul
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
